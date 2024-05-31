@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/Users/ivanmironov/data_science/ITMO_work/NetFormer/run/netformer/train.py", line 61, in <module>
+    train_dataset = NetDataset(num_train_nets)
+  File "/Users/ivanmironov/data_science/ITMO_work/NetFormer/run/netformer/dataset.py", line 23, in __init__
+    net = Net(10, 1, act)
+NameError: name 'act' is not defined
+Traceback (most recent call last):
+  File "/Users/ivanmironov/data_science/ITMO_work/NetFormer/run/netformer/train.py", line 61, in <module>
+    train_dataset = NetDataset(num_train_nets)
+  File "/Users/ivanmironov/data_science/ITMO_work/NetFormer/run/netformer/dataset.py", line 23, in __init__
+    net = Net(10, 1, act)
+NameError: name 'act' is not defined

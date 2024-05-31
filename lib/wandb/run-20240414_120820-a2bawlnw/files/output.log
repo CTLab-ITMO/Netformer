@@ -1,0 +1,80 @@
+/Users/ivanmironov/anaconda3/envs/data_science/lib/python3.9/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at /Users/runner/work/pytorch/pytorch/pytorch/aten/src/ATen/native/TensorShape.cpp:3527.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/Users/ivanmironov/data_science/ITMO_work/NetFormer/run/netformer/converter.py:24: UserWarning: The use of `x.T` on tensors of dimension other than 2 to reverse their shape is deprecated and it will throw an error in a future release. Consider `x.mT` to transpose batches of matrices or `x.permute(*torch.arange(x.ndim - 1, -1, -1))` to reverse the dimensions of a tensor. (Triggered internally at /Users/runner/work/pytorch/pytorch/pytorch/aten/src/ATen/native/TensorShape.cpp:3618.)
+  return torch.stack([inds[0], inds[1], weights.T, torch.full((rows, cols), 0)]).T.reshape(-1, 4)
+
+
+
+  2%|██▉                                                                                                                                                                                       | 4/250 [00:13<14:15,  3.48s/it]
+Traceback (most recent call last):
+  File "/Users/ivanmironov/data_science/ITMO_work/NetFormer/run/netformer/train.py", line 84, in <module>
+    output = transformer(data, data)
+  File "/Users/ivanmironov/anaconda3/envs/data_science/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/Users/ivanmironov/anaconda3/envs/data_science/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/Users/ivanmironov/data_science/ITMO_work/NetFormer/run/netformer/netformer.py", line 189, in forward
+    self.latent = self.encode(src)
+  File "/Users/ivanmironov/data_science/ITMO_work/NetFormer/run/netformer/netformer.py", line 182, in encode
+    return self.encoder(src)
+  File "/Users/ivanmironov/anaconda3/envs/data_science/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/Users/ivanmironov/anaconda3/envs/data_science/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/Users/ivanmironov/data_science/ITMO_work/NetFormer/run/netformer/netformer.py", line 137, in forward
+    enc_output = enc_layer(enc_output)
+  File "/Users/ivanmironov/anaconda3/envs/data_science/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/Users/ivanmironov/anaconda3/envs/data_science/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/Users/ivanmironov/data_science/ITMO_work/NetFormer/run/netformer/netformer.py", line 90, in forward
+    ff_output = self.feed_forward(x)
+  File "/Users/ivanmironov/anaconda3/envs/data_science/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/Users/ivanmironov/anaconda3/envs/data_science/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/Users/ivanmironov/data_science/ITMO_work/NetFormer/run/netformer/netformer.py", line 76, in forward
+    return self.fc2(self.relu(self.fc1(x)))
+  File "/Users/ivanmironov/anaconda3/envs/data_science/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/Users/ivanmironov/anaconda3/envs/data_science/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/Users/ivanmironov/anaconda3/envs/data_science/lib/python3.9/site-packages/torch/nn/modules/linear.py", line 114, in forward
+    return F.linear(input, self.weight, self.bias)
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/Users/ivanmironov/data_science/ITMO_work/NetFormer/run/netformer/train.py", line 84, in <module>
+    output = transformer(data, data)
+  File "/Users/ivanmironov/anaconda3/envs/data_science/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/Users/ivanmironov/anaconda3/envs/data_science/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/Users/ivanmironov/data_science/ITMO_work/NetFormer/run/netformer/netformer.py", line 189, in forward
+    self.latent = self.encode(src)
+  File "/Users/ivanmironov/data_science/ITMO_work/NetFormer/run/netformer/netformer.py", line 182, in encode
+    return self.encoder(src)
+  File "/Users/ivanmironov/anaconda3/envs/data_science/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/Users/ivanmironov/anaconda3/envs/data_science/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/Users/ivanmironov/data_science/ITMO_work/NetFormer/run/netformer/netformer.py", line 137, in forward
+    enc_output = enc_layer(enc_output)
+  File "/Users/ivanmironov/anaconda3/envs/data_science/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/Users/ivanmironov/anaconda3/envs/data_science/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/Users/ivanmironov/data_science/ITMO_work/NetFormer/run/netformer/netformer.py", line 90, in forward
+    ff_output = self.feed_forward(x)
+  File "/Users/ivanmironov/anaconda3/envs/data_science/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/Users/ivanmironov/anaconda3/envs/data_science/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/Users/ivanmironov/data_science/ITMO_work/NetFormer/run/netformer/netformer.py", line 76, in forward
+    return self.fc2(self.relu(self.fc1(x)))
+  File "/Users/ivanmironov/anaconda3/envs/data_science/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/Users/ivanmironov/anaconda3/envs/data_science/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/Users/ivanmironov/anaconda3/envs/data_science/lib/python3.9/site-packages/torch/nn/modules/linear.py", line 114, in forward
+    return F.linear(input, self.weight, self.bias)
+KeyboardInterrupt

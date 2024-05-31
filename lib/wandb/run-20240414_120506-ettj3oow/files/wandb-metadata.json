@@ -1,0 +1,31 @@
+{
+    "os": "macOS-14.4.1-arm64-arm-64bit",
+    "python": "3.9.18",
+    "heartbeatAt": "2024-04-14T09:05:07.264483",
+    "startedAt": "2024-04-14T09:05:06.405307",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/Users/ivanmironov/data_science/ITMO_work/NetFormer/run/netformer/train.py",
+    "codePathLocal": "netformer/train.py",
+    "codePath": "netformer/train.py",
+    "host": "MacBook-Pro-Ivan-4.local",
+    "username": "ivanmironov",
+    "executable": "/Users/ivanmironov/anaconda3/envs/data_science/bin/python3",
+    "cpu_count": 8,
+    "cpu_count_logical": 8,
+    "disk": {
+        "/": {
+            "total": 460.4317207336426,
+            "used": 403.3212203979492
+        }
+    },
+    "gpuapple": {
+        "type": "arm",
+        "vendor": "Apple"
+    },
+    "memory": {
+        "total": 16.0
+    }
+}

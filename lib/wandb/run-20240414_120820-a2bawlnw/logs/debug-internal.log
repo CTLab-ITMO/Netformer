@@ -1,0 +1,200 @@
+2024-04-14 12:08:20,699 INFO    StreamThr :31449 [internal.py:wandb_internal():86] W&B internal server running at pid: 31449, started at: 2024-04-14 12:08:20.698056
+2024-04-14 12:08:20,700 DEBUG   HandlerThread:31449 [handler.py:handle_request():146] handle_request: status
+2024-04-14 12:08:20,706 INFO    WriterThread:31449 [datastore.py:open_for_write():85] open: /Users/ivanmironov/data_science/ITMO_work/NetFormer/run/wandb/run-20240414_120820-a2bawlnw/run-a2bawlnw.wandb
+2024-04-14 12:08:20,706 DEBUG   SenderThread:31449 [sender.py:send():380] send: header
+2024-04-14 12:08:20,707 DEBUG   SenderThread:31449 [sender.py:send():380] send: run
+2024-04-14 12:08:21,102 INFO    SenderThread:31449 [dir_watcher.py:__init__():211] watching files in: /Users/ivanmironov/data_science/ITMO_work/NetFormer/run/wandb/run-20240414_120820-a2bawlnw/files
+2024-04-14 12:08:21,102 INFO    SenderThread:31449 [sender.py:_start_run_threads():1124] run started: a2bawlnw with start time 1713085700.699968
+2024-04-14 12:08:21,110 DEBUG   HandlerThread:31449 [handler.py:handle_request():146] handle_request: check_version
+2024-04-14 12:08:21,110 DEBUG   SenderThread:31449 [sender.py:send_request():407] send_request: check_version
+2024-04-14 12:08:21,313 DEBUG   HandlerThread:31449 [handler.py:handle_request():146] handle_request: run_start
+2024-04-14 12:08:21,326 DEBUG   HandlerThread:31449 [system_info.py:__init__():32] System info init
+2024-04-14 12:08:21,327 DEBUG   HandlerThread:31449 [system_info.py:__init__():47] System info init done
+2024-04-14 12:08:21,327 INFO    HandlerThread:31449 [system_monitor.py:start():194] Starting system monitor
+2024-04-14 12:08:21,327 INFO    SystemMonitor:31449 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-04-14 12:08:21,327 INFO    HandlerThread:31449 [system_monitor.py:probe():214] Collecting system info
+2024-04-14 12:08:21,327 DEBUG   HandlerThread:31449 [system_info.py:probe():196] Probing system
+2024-04-14 12:08:21,328 INFO    SystemMonitor:31449 [interfaces.py:start():190] Started cpu monitoring
+2024-04-14 12:08:21,329 INFO    SystemMonitor:31449 [interfaces.py:start():190] Started disk monitoring
+2024-04-14 12:08:21,331 INFO    SystemMonitor:31449 [interfaces.py:start():190] Started gpuapple monitoring
+2024-04-14 12:08:21,335 INFO    SystemMonitor:31449 [interfaces.py:start():190] Started memory monitoring
+2024-04-14 12:08:21,336 INFO    SystemMonitor:31449 [interfaces.py:start():190] Started network monitoring
+2024-04-14 12:08:21,340 DEBUG   HandlerThread:31449 [gitlib.py:_init_repo():56] git repository is invalid
+2024-04-14 12:08:21,340 DEBUG   HandlerThread:31449 [system_info.py:probe():244] Probing system done
+2024-04-14 12:08:21,341 DEBUG   HandlerThread:31449 [system_monitor.py:probe():223] {'os': 'macOS-14.4.1-arm64-arm-64bit', 'python': '3.9.18', 'heartbeatAt': '2024-04-14T09:08:21.327909', 'startedAt': '2024-04-14T09:08:20.690983', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '/Users/ivanmironov/data_science/ITMO_work/NetFormer/run/netformer/train.py', 'codePathLocal': 'netformer/train.py', 'codePath': 'netformer/train.py', 'host': 'MacBook-Pro-Ivan-4.local', 'username': 'ivanmironov', 'executable': '/Users/ivanmironov/anaconda3/envs/data_science/bin/python3', 'cpu_count': 8, 'cpu_count_logical': 8, 'disk': {'/': {'total': 460.4317207336426, 'used': 403.3390350341797}}, 'gpuapple': {'type': 'arm', 'vendor': 'Apple'}, 'memory': {'total': 16.0}}
+2024-04-14 12:08:21,341 INFO    HandlerThread:31449 [system_monitor.py:probe():224] Finished collecting system info
+2024-04-14 12:08:21,341 INFO    HandlerThread:31449 [system_monitor.py:probe():227] Publishing system info
+2024-04-14 12:08:21,341 DEBUG   HandlerThread:31449 [system_info.py:_save_pip():52] Saving list of pip packages installed into the current environment
+2024-04-14 12:08:21,341 DEBUG   HandlerThread:31449 [system_info.py:_save_pip():68] Saving pip packages done
+2024-04-14 12:08:21,341 DEBUG   HandlerThread:31449 [system_info.py:_save_conda():75] Saving list of conda packages installed into the current environment
+2024-04-14 12:08:22,108 INFO    Thread-12 :31449 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/ivanmironov/data_science/ITMO_work/NetFormer/run/wandb/run-20240414_120820-a2bawlnw/files/requirements.txt
+2024-04-14 12:08:22,108 INFO    Thread-12 :31449 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/ivanmironov/data_science/ITMO_work/NetFormer/run/wandb/run-20240414_120820-a2bawlnw/files/conda-environment.yaml
+2024-04-14 12:08:23,361 DEBUG   HandlerThread:31449 [system_info.py:_save_conda():87] Saving conda packages done
+2024-04-14 12:08:23,362 INFO    HandlerThread:31449 [system_monitor.py:probe():229] Finished publishing system info
+2024-04-14 12:08:23,363 DEBUG   SenderThread:31449 [sender.py:send():380] send: files
+2024-04-14 12:08:23,363 INFO    SenderThread:31449 [sender.py:_save_file():1380] saving file wandb-metadata.json with policy now
+2024-04-14 12:08:23,366 DEBUG   HandlerThread:31449 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-14 12:08:23,367 DEBUG   SenderThread:31449 [sender.py:send_request():407] send_request: stop_status
+2024-04-14 12:08:23,368 DEBUG   HandlerThread:31449 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-14 12:08:23,567 DEBUG   SenderThread:31449 [sender.py:send():380] send: telemetry
+2024-04-14 12:08:23,950 INFO    wandb-upload_0:31449 [upload_job.py:push():131] Uploaded file /var/folders/j3/pkh9dw6j2jz20w5kf6q4j47c0000gn/T/tmplxx78ydawandb/l7ayj9oj-wandb-metadata.json
+2024-04-14 12:08:24,116 INFO    Thread-12 :31449 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/ivanmironov/data_science/ITMO_work/NetFormer/run/wandb/run-20240414_120820-a2bawlnw/files/conda-environment.yaml
+2024-04-14 12:08:24,116 INFO    Thread-12 :31449 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/ivanmironov/data_science/ITMO_work/NetFormer/run/wandb/run-20240414_120820-a2bawlnw/files/wandb-metadata.json
+2024-04-14 12:08:24,116 INFO    Thread-12 :31449 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/ivanmironov/data_science/ITMO_work/NetFormer/run/wandb/run-20240414_120820-a2bawlnw/files/output.log
+2024-04-14 12:08:26,050 DEBUG   HandlerThread:31449 [handler.py:handle_request():146] handle_request: status_report
+2024-04-14 12:08:26,127 INFO    Thread-12 :31449 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/ivanmironov/data_science/ITMO_work/NetFormer/run/wandb/run-20240414_120820-a2bawlnw/files/output.log
+2024-04-14 12:08:30,143 INFO    Thread-12 :31449 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/ivanmironov/data_science/ITMO_work/NetFormer/run/wandb/run-20240414_120820-a2bawlnw/files/output.log
+2024-04-14 12:08:31,756 DEBUG   HandlerThread:31449 [handler.py:handle_request():146] handle_request: status_report
+2024-04-14 12:08:34,162 INFO    Thread-12 :31449 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/ivanmironov/data_science/ITMO_work/NetFormer/run/wandb/run-20240414_120820-a2bawlnw/files/output.log
+2024-04-14 12:08:36,784 DEBUG   HandlerThread:31449 [handler.py:handle_request():146] handle_request: status_report
+2024-04-14 12:08:38,171 INFO    Thread-12 :31449 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/ivanmironov/data_science/ITMO_work/NetFormer/run/wandb/run-20240414_120820-a2bawlnw/files/output.log
+2024-04-14 12:08:38,367 DEBUG   HandlerThread:31449 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-14 12:08:38,367 DEBUG   SenderThread:31449 [sender.py:send_request():407] send_request: stop_status
+2024-04-14 12:08:38,371 DEBUG   HandlerThread:31449 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-14 12:08:38,978 DEBUG   SenderThread:31449 [sender.py:send():380] send: exit
+2024-04-14 12:08:38,978 INFO    SenderThread:31449 [sender.py:send_exit():585] handling exit code: 255
+2024-04-14 12:08:38,979 INFO    SenderThread:31449 [sender.py:send_exit():587] handling runtime: 17
+2024-04-14 12:08:38,979 INFO    SenderThread:31449 [sender.py:_save_file():1380] saving file wandb-summary.json with policy end
+2024-04-14 12:08:38,979 INFO    SenderThread:31449 [sender.py:send_exit():593] send defer
+2024-04-14 12:08:38,979 DEBUG   HandlerThread:31449 [handler.py:handle_request():146] handle_request: defer
+2024-04-14 12:08:38,979 INFO    HandlerThread:31449 [handler.py:handle_request_defer():172] handle defer: 0
+2024-04-14 12:08:38,979 DEBUG   SenderThread:31449 [sender.py:send_request():407] send_request: defer
+2024-04-14 12:08:38,979 INFO    SenderThread:31449 [sender.py:send_request_defer():609] handle sender defer: 0
+2024-04-14 12:08:38,980 INFO    SenderThread:31449 [sender.py:transition_state():613] send defer: 1
+2024-04-14 12:08:38,980 DEBUG   HandlerThread:31449 [handler.py:handle_request():146] handle_request: defer
+2024-04-14 12:08:38,980 INFO    HandlerThread:31449 [handler.py:handle_request_defer():172] handle defer: 1
+2024-04-14 12:08:38,980 DEBUG   SenderThread:31449 [sender.py:send_request():407] send_request: defer
+2024-04-14 12:08:38,980 INFO    SenderThread:31449 [sender.py:send_request_defer():609] handle sender defer: 1
+2024-04-14 12:08:38,980 INFO    SenderThread:31449 [sender.py:transition_state():613] send defer: 2
+2024-04-14 12:08:38,980 DEBUG   HandlerThread:31449 [handler.py:handle_request():146] handle_request: defer
+2024-04-14 12:08:38,980 INFO    HandlerThread:31449 [handler.py:handle_request_defer():172] handle defer: 2
+2024-04-14 12:08:38,980 INFO    HandlerThread:31449 [system_monitor.py:finish():203] Stopping system monitor
+2024-04-14 12:08:38,980 DEBUG   SystemMonitor:31449 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-04-14 12:08:38,980 DEBUG   SystemMonitor:31449 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-04-14 12:08:38,980 DEBUG   SystemMonitor:31449 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-04-14 12:08:38,980 INFO    HandlerThread:31449 [interfaces.py:finish():202] Joined cpu monitor
+2024-04-14 12:08:38,981 INFO    HandlerThread:31449 [interfaces.py:finish():202] Joined disk monitor
+2024-04-14 12:08:39,173 INFO    Thread-12 :31449 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/ivanmironov/data_science/ITMO_work/NetFormer/run/wandb/run-20240414_120820-a2bawlnw/files/wandb-summary.json
+2024-04-14 12:08:39,815 INFO    HandlerThread:31449 [interfaces.py:finish():202] Joined gpuapple monitor
+2024-04-14 12:08:39,815 INFO    HandlerThread:31449 [interfaces.py:finish():202] Joined memory monitor
+2024-04-14 12:08:39,815 INFO    HandlerThread:31449 [interfaces.py:finish():202] Joined network monitor
+2024-04-14 12:08:39,815 DEBUG   SenderThread:31449 [sender.py:send_request():407] send_request: defer
+2024-04-14 12:08:39,815 INFO    SenderThread:31449 [sender.py:send_request_defer():609] handle sender defer: 2
+2024-04-14 12:08:39,815 INFO    SenderThread:31449 [sender.py:transition_state():613] send defer: 3
+2024-04-14 12:08:39,815 DEBUG   SenderThread:31449 [sender.py:send():380] send: telemetry
+2024-04-14 12:08:39,815 DEBUG   SenderThread:31449 [sender.py:send():380] send: stats
+2024-04-14 12:08:39,815 DEBUG   HandlerThread:31449 [handler.py:handle_request():146] handle_request: defer
+2024-04-14 12:08:39,815 INFO    HandlerThread:31449 [handler.py:handle_request_defer():172] handle defer: 3
+2024-04-14 12:08:39,815 DEBUG   SenderThread:31449 [sender.py:send_request():407] send_request: defer
+2024-04-14 12:08:39,815 INFO    SenderThread:31449 [sender.py:send_request_defer():609] handle sender defer: 3
+2024-04-14 12:08:39,815 INFO    SenderThread:31449 [sender.py:transition_state():613] send defer: 4
+2024-04-14 12:08:39,816 DEBUG   HandlerThread:31449 [handler.py:handle_request():146] handle_request: defer
+2024-04-14 12:08:39,816 INFO    HandlerThread:31449 [handler.py:handle_request_defer():172] handle defer: 4
+2024-04-14 12:08:39,816 DEBUG   SenderThread:31449 [sender.py:send_request():407] send_request: defer
+2024-04-14 12:08:39,816 INFO    SenderThread:31449 [sender.py:send_request_defer():609] handle sender defer: 4
+2024-04-14 12:08:39,816 INFO    SenderThread:31449 [sender.py:transition_state():613] send defer: 5
+2024-04-14 12:08:39,816 DEBUG   HandlerThread:31449 [handler.py:handle_request():146] handle_request: defer
+2024-04-14 12:08:39,816 INFO    HandlerThread:31449 [handler.py:handle_request_defer():172] handle defer: 5
+2024-04-14 12:08:39,816 DEBUG   SenderThread:31449 [sender.py:send():380] send: summary
+2024-04-14 12:08:39,816 INFO    SenderThread:31449 [sender.py:_save_file():1380] saving file wandb-summary.json with policy end
+2024-04-14 12:08:39,816 DEBUG   SenderThread:31449 [sender.py:send_request():407] send_request: defer
+2024-04-14 12:08:39,816 INFO    SenderThread:31449 [sender.py:send_request_defer():609] handle sender defer: 5
+2024-04-14 12:08:39,816 INFO    SenderThread:31449 [sender.py:transition_state():613] send defer: 6
+2024-04-14 12:08:39,816 DEBUG   HandlerThread:31449 [handler.py:handle_request():146] handle_request: defer
+2024-04-14 12:08:39,816 INFO    HandlerThread:31449 [handler.py:handle_request_defer():172] handle defer: 6
+2024-04-14 12:08:39,816 DEBUG   SenderThread:31449 [sender.py:send_request():407] send_request: defer
+2024-04-14 12:08:39,817 INFO    SenderThread:31449 [sender.py:send_request_defer():609] handle sender defer: 6
+2024-04-14 12:08:39,818 DEBUG   HandlerThread:31449 [handler.py:handle_request():146] handle_request: status_report
+2024-04-14 12:08:39,982 DEBUG   HandlerThread:31449 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-14 12:08:39,982 INFO    SenderThread:31449 [sender.py:transition_state():613] send defer: 7
+2024-04-14 12:08:39,983 DEBUG   SenderThread:31449 [sender.py:send_request():407] send_request: poll_exit
+2024-04-14 12:08:39,983 DEBUG   HandlerThread:31449 [handler.py:handle_request():146] handle_request: defer
+2024-04-14 12:08:39,983 INFO    HandlerThread:31449 [handler.py:handle_request_defer():172] handle defer: 7
+2024-04-14 12:08:39,983 DEBUG   SenderThread:31449 [sender.py:send_request():407] send_request: defer
+2024-04-14 12:08:39,983 INFO    SenderThread:31449 [sender.py:send_request_defer():609] handle sender defer: 7
+2024-04-14 12:08:40,176 INFO    Thread-12 :31449 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/ivanmironov/data_science/ITMO_work/NetFormer/run/wandb/run-20240414_120820-a2bawlnw/files/config.yaml
+2024-04-14 12:08:40,176 INFO    Thread-12 :31449 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/ivanmironov/data_science/ITMO_work/NetFormer/run/wandb/run-20240414_120820-a2bawlnw/files/wandb-summary.json
+2024-04-14 12:08:40,177 INFO    Thread-12 :31449 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/ivanmironov/data_science/ITMO_work/NetFormer/run/wandb/run-20240414_120820-a2bawlnw/files/output.log
+2024-04-14 12:08:40,987 DEBUG   HandlerThread:31449 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-14 12:08:41,619 INFO    SenderThread:31449 [sender.py:transition_state():613] send defer: 8
+2024-04-14 12:08:41,620 DEBUG   SenderThread:31449 [sender.py:send_request():407] send_request: poll_exit
+2024-04-14 12:08:41,621 DEBUG   HandlerThread:31449 [handler.py:handle_request():146] handle_request: defer
+2024-04-14 12:08:41,621 INFO    HandlerThread:31449 [handler.py:handle_request_defer():172] handle defer: 8
+2024-04-14 12:08:41,621 DEBUG   SenderThread:31449 [sender.py:send_request():407] send_request: defer
+2024-04-14 12:08:41,621 INFO    SenderThread:31449 [sender.py:send_request_defer():609] handle sender defer: 8
+2024-04-14 12:08:41,621 INFO    SenderThread:31449 [job_builder.py:build():298] Attempting to build job artifact
+2024-04-14 12:08:41,623 INFO    SenderThread:31449 [job_builder.py:_get_source_type():439] no source found
+2024-04-14 12:08:41,623 INFO    SenderThread:31449 [sender.py:transition_state():613] send defer: 9
+2024-04-14 12:08:41,623 DEBUG   HandlerThread:31449 [handler.py:handle_request():146] handle_request: defer
+2024-04-14 12:08:41,623 INFO    HandlerThread:31449 [handler.py:handle_request_defer():172] handle defer: 9
+2024-04-14 12:08:41,624 DEBUG   SenderThread:31449 [sender.py:send_request():407] send_request: defer
+2024-04-14 12:08:41,624 INFO    SenderThread:31449 [sender.py:send_request_defer():609] handle sender defer: 9
+2024-04-14 12:08:41,624 INFO    SenderThread:31449 [dir_watcher.py:finish():358] shutting down directory watcher
+2024-04-14 12:08:41,995 DEBUG   HandlerThread:31449 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-14 12:08:42,182 INFO    SenderThread:31449 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/ivanmironov/data_science/ITMO_work/NetFormer/run/wandb/run-20240414_120820-a2bawlnw/files/output.log
+2024-04-14 12:08:42,183 INFO    SenderThread:31449 [dir_watcher.py:finish():388] scan: /Users/ivanmironov/data_science/ITMO_work/NetFormer/run/wandb/run-20240414_120820-a2bawlnw/files
+2024-04-14 12:08:42,184 INFO    SenderThread:31449 [dir_watcher.py:finish():402] scan save: /Users/ivanmironov/data_science/ITMO_work/NetFormer/run/wandb/run-20240414_120820-a2bawlnw/files/requirements.txt requirements.txt
+2024-04-14 12:08:42,184 INFO    SenderThread:31449 [dir_watcher.py:finish():402] scan save: /Users/ivanmironov/data_science/ITMO_work/NetFormer/run/wandb/run-20240414_120820-a2bawlnw/files/output.log output.log
+2024-04-14 12:08:42,187 INFO    SenderThread:31449 [dir_watcher.py:finish():402] scan save: /Users/ivanmironov/data_science/ITMO_work/NetFormer/run/wandb/run-20240414_120820-a2bawlnw/files/config.yaml config.yaml
+2024-04-14 12:08:42,189 INFO    SenderThread:31449 [dir_watcher.py:finish():402] scan save: /Users/ivanmironov/data_science/ITMO_work/NetFormer/run/wandb/run-20240414_120820-a2bawlnw/files/wandb-summary.json wandb-summary.json
+2024-04-14 12:08:42,192 INFO    SenderThread:31449 [dir_watcher.py:finish():402] scan save: /Users/ivanmironov/data_science/ITMO_work/NetFormer/run/wandb/run-20240414_120820-a2bawlnw/files/conda-environment.yaml conda-environment.yaml
+2024-04-14 12:08:42,195 INFO    SenderThread:31449 [dir_watcher.py:finish():402] scan save: /Users/ivanmironov/data_science/ITMO_work/NetFormer/run/wandb/run-20240414_120820-a2bawlnw/files/wandb-metadata.json wandb-metadata.json
+2024-04-14 12:08:42,196 INFO    SenderThread:31449 [sender.py:transition_state():613] send defer: 10
+2024-04-14 12:08:42,196 DEBUG   SenderThread:31449 [sender.py:send_request():407] send_request: poll_exit
+2024-04-14 12:08:42,197 DEBUG   HandlerThread:31449 [handler.py:handle_request():146] handle_request: defer
+2024-04-14 12:08:42,197 INFO    HandlerThread:31449 [handler.py:handle_request_defer():172] handle defer: 10
+2024-04-14 12:08:42,199 DEBUG   SenderThread:31449 [sender.py:send_request():407] send_request: defer
+2024-04-14 12:08:42,199 INFO    SenderThread:31449 [sender.py:send_request_defer():609] handle sender defer: 10
+2024-04-14 12:08:42,199 INFO    SenderThread:31449 [file_pusher.py:finish():175] shutting down file pusher
+2024-04-14 12:08:42,626 INFO    wandb-upload_1:31449 [upload_job.py:push():131] Uploaded file /Users/ivanmironov/data_science/ITMO_work/NetFormer/run/wandb/run-20240414_120820-a2bawlnw/files/output.log
+2024-04-14 12:08:42,651 INFO    wandb-upload_0:31449 [upload_job.py:push():131] Uploaded file /Users/ivanmironov/data_science/ITMO_work/NetFormer/run/wandb/run-20240414_120820-a2bawlnw/files/requirements.txt
+2024-04-14 12:08:42,761 INFO    wandb-upload_3:31449 [upload_job.py:push():131] Uploaded file /Users/ivanmironov/data_science/ITMO_work/NetFormer/run/wandb/run-20240414_120820-a2bawlnw/files/wandb-summary.json
+2024-04-14 12:08:42,775 INFO    wandb-upload_2:31449 [upload_job.py:push():131] Uploaded file /Users/ivanmironov/data_science/ITMO_work/NetFormer/run/wandb/run-20240414_120820-a2bawlnw/files/config.yaml
+2024-04-14 12:08:42,795 INFO    wandb-upload_4:31449 [upload_job.py:push():131] Uploaded file /Users/ivanmironov/data_science/ITMO_work/NetFormer/run/wandb/run-20240414_120820-a2bawlnw/files/conda-environment.yaml
+2024-04-14 12:08:42,999 DEBUG   HandlerThread:31449 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-14 12:08:43,002 INFO    Thread-11 :31449 [sender.py:transition_state():613] send defer: 11
+2024-04-14 12:08:43,002 DEBUG   SenderThread:31449 [sender.py:send_request():407] send_request: poll_exit
+2024-04-14 12:08:43,003 DEBUG   HandlerThread:31449 [handler.py:handle_request():146] handle_request: defer
+2024-04-14 12:08:43,003 INFO    HandlerThread:31449 [handler.py:handle_request_defer():172] handle defer: 11
+2024-04-14 12:08:43,004 DEBUG   SenderThread:31449 [sender.py:send_request():407] send_request: defer
+2024-04-14 12:08:43,005 INFO    SenderThread:31449 [sender.py:send_request_defer():609] handle sender defer: 11
+2024-04-14 12:08:43,005 INFO    SenderThread:31449 [file_pusher.py:join():181] waiting for file pusher
+2024-04-14 12:08:43,005 INFO    SenderThread:31449 [sender.py:transition_state():613] send defer: 12
+2024-04-14 12:08:43,016 DEBUG   HandlerThread:31449 [handler.py:handle_request():146] handle_request: defer
+2024-04-14 12:08:43,016 INFO    HandlerThread:31449 [handler.py:handle_request_defer():172] handle defer: 12
+2024-04-14 12:08:43,016 DEBUG   SenderThread:31449 [sender.py:send_request():407] send_request: defer
+2024-04-14 12:08:43,016 INFO    SenderThread:31449 [sender.py:send_request_defer():609] handle sender defer: 12
+2024-04-14 12:08:43,016 INFO    SenderThread:31449 [file_stream.py:finish():595] file stream finish called
+2024-04-14 12:08:43,169 INFO    SenderThread:31449 [file_stream.py:finish():599] file stream finish is done
+2024-04-14 12:08:43,170 INFO    SenderThread:31449 [sender.py:transition_state():613] send defer: 13
+2024-04-14 12:08:43,170 DEBUG   HandlerThread:31449 [handler.py:handle_request():146] handle_request: defer
+2024-04-14 12:08:43,170 INFO    HandlerThread:31449 [handler.py:handle_request_defer():172] handle defer: 13
+2024-04-14 12:08:43,171 DEBUG   SenderThread:31449 [sender.py:send_request():407] send_request: defer
+2024-04-14 12:08:43,171 INFO    SenderThread:31449 [sender.py:send_request_defer():609] handle sender defer: 13
+2024-04-14 12:08:43,171 INFO    SenderThread:31449 [sender.py:transition_state():613] send defer: 14
+2024-04-14 12:08:43,171 DEBUG   HandlerThread:31449 [handler.py:handle_request():146] handle_request: defer
+2024-04-14 12:08:43,171 INFO    HandlerThread:31449 [handler.py:handle_request_defer():172] handle defer: 14
+2024-04-14 12:08:43,171 DEBUG   SenderThread:31449 [sender.py:send():380] send: final
+2024-04-14 12:08:43,172 DEBUG   SenderThread:31449 [sender.py:send():380] send: footer
+2024-04-14 12:08:43,172 DEBUG   SenderThread:31449 [sender.py:send_request():407] send_request: defer
+2024-04-14 12:08:43,172 INFO    SenderThread:31449 [sender.py:send_request_defer():609] handle sender defer: 14
+2024-04-14 12:08:43,173 DEBUG   HandlerThread:31449 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-14 12:08:43,173 DEBUG   HandlerThread:31449 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-14 12:08:43,173 DEBUG   HandlerThread:31449 [handler.py:handle_request():146] handle_request: server_info
+2024-04-14 12:08:43,174 DEBUG   HandlerThread:31449 [handler.py:handle_request():146] handle_request: get_summary
+2024-04-14 12:08:43,174 DEBUG   SenderThread:31449 [sender.py:send_request():407] send_request: poll_exit
+2024-04-14 12:08:43,174 DEBUG   HandlerThread:31449 [handler.py:handle_request():146] handle_request: sampled_history
+2024-04-14 12:08:43,174 DEBUG   SenderThread:31449 [sender.py:send_request():407] send_request: poll_exit
+2024-04-14 12:08:43,174 DEBUG   HandlerThread:31449 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-14 12:08:43,175 DEBUG   SenderThread:31449 [sender.py:send_request():407] send_request: server_info
+2024-04-14 12:08:43,178 DEBUG   HandlerThread:31449 [handler.py:handle_request():146] handle_request: job_info
+2024-04-14 12:08:43,345 DEBUG   SenderThread:31449 [sender.py:send_request():407] send_request: job_info
+2024-04-14 12:08:43,345 INFO    MainThread:31449 [wandb_run.py:_footer_history_summary_info():3760] rendering history
+2024-04-14 12:08:43,345 INFO    MainThread:31449 [wandb_run.py:_footer_history_summary_info():3792] rendering summary
+2024-04-14 12:08:43,345 INFO    MainThread:31449 [wandb_run.py:_footer_sync_info():3719] logging synced files
+2024-04-14 12:08:43,346 DEBUG   HandlerThread:31449 [handler.py:handle_request():146] handle_request: shutdown
+2024-04-14 12:08:43,346 INFO    HandlerThread:31449 [handler.py:finish():866] shutting down handler
+2024-04-14 12:08:44,182 INFO    WriterThread:31449 [datastore.py:close():294] close: /Users/ivanmironov/data_science/ITMO_work/NetFormer/run/wandb/run-20240414_120820-a2bawlnw/run-a2bawlnw.wandb
+2024-04-14 12:08:44,348 INFO    SenderThread:31449 [sender.py:finish():1536] shutting down sender
+2024-04-14 12:08:44,348 INFO    SenderThread:31449 [file_pusher.py:finish():175] shutting down file pusher
+2024-04-14 12:08:44,348 INFO    SenderThread:31449 [file_pusher.py:join():181] waiting for file pusher
