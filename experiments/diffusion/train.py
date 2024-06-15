@@ -1,8 +1,12 @@
 import torch
+from torch import nn
 from torch.optim import Adam
+from torch.utils.data import DataLoader
 from tqdm import tqdm
 
 from experiments.diffusion.DDPM import DDPM
+from experiments.diffusion.MatrixConverter import matrix_converter
+from lib.netformer.dataset import Net
 
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 
@@ -11,15 +15,36 @@ model = DDPM(time_steps_number, device)
 
 n_epochs = 20
 lr = 0.001
+n_steps = model.n_steps
+n_samples = 25
 
 optimm = Adam(model.noise_predictor.parameters(), lr)
 
 losses = [[], []]
 
-n_steps = model.n_steps
-n_epochs = 20
+act = {
+    "ReLU": {
+        "layer": nn.ReLU,
+        "args": {},
+    },
+    "Tanh": {
+        "layer": nn.Tanh,
+        "args": {},
+    },
+    "Sigmoid": {
+        "layer": nn.Sigmoid,
+        "args": {},
+    },
+}
 
-n_samples = 25
+
+train_data = torch.stack([matrix_converter(Net(10,1, act)) for i in range(1000)])
+test_data = torch.stack([matrix_converter(Net(10,1, act)) for i in range(1000)])
+
+
+train_dataloader = DataLoader(train_data, batch_size=20, shuffle=True)#, transform=transform)
+val_dataloader = DataLoader(test_data, batch_size=20, shuffle=True)
+
 
 for epoch in range(1, n_epochs + 1):
     train_loss = 0.0
