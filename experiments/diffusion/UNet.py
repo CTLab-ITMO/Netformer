@@ -28,3 +28,18 @@ class SinusoidalPositionEmbeddings(nn.Module):
 
     def forward(self, time):
         return self.time_to_embed(time)
+
+
+class UNetBlock(nn.Module):
+    def __init__(self, shape, in_ch, out_ch, normalize=True):
+        super().__init__()
+        self.layers = nn.Sequential(
+            nn.LayerNorm(shape) if normalize else nn.Identity(),
+            nn.Conv2d(in_ch, out_ch, kernel_size=3, stride=1, padding=1),
+            nn.SiLU(),
+            nn.Conv2d(out_ch, out_ch, kernel_size=3, stride=1, padding=1),
+            nn.SiLU(),
+        )
+
+    def forward(self, x):
+        return self.layers(x)
