@@ -4,6 +4,7 @@ from converter import matrix_converter
 from configs import *
 from tqdm import tqdm
 from utils import get_meta_features
+from configs import MODELS_PATH
 
 class NetDataset(Dataset):
     def __init__(self, start, end, regs):
@@ -13,7 +14,7 @@ class NetDataset(Dataset):
         for i in tqdm(range(len(regs))):
             meta_features = get_meta_features(regs[i])
             for j in range(start, end):
-                net = torch.load(f"/content/fitted 2/reg{i}/model{j}.pt", map_location=torch.device('cpu'))
+                net = torch.load(f"{MODELS_PATH}/reg{i}/model{j}.pt", map_location=torch.device('cpu'))
                 matrix, count_matrix = matrix_converter(net.layers)
                 self.nets += [matrix_converter(net.layers)]
                 self.mfs += [meta_features]
@@ -35,3 +36,16 @@ def collate_fn(data):
         mfs[i] = torch.tensor(elem[1])
         reg[i] = torch.tensor(elem[2])
     return nets, mfs, reg
+
+
+class RegDataset(Dataset):
+    def __init__(self, df):
+        super().__init__()
+        self.features = torch.tensor(df.drop(columns=['reg_id', 'y']).values, dtype=torch.float32)
+        self.targets = torch.tensor(df['y'].values, dtype=torch.float32)
+
+    def __len__(self):
+        return len(self.targets)
+
+    def __getitem__(self, idx):
+        return self.features[idx], self.targets[idx]
