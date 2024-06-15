@@ -6,7 +6,7 @@ project_root = os.path.abspath(os.path.join(current_dir, '../../'))
 sys.path.insert(0, project_root)
 
 
-from lib.netformer.dataset import Net, act
+from lib.netformer.dataset import Net, act 
 from lib.netformer.reverse_converter import RConverter
 from converter import matrix_converter
 from model import CNNVAE
