@@ -1,5 +1,6 @@
 import torch
-import torch.nn as nn
+import torch.nn.functional as F
+from pymfe.mfe import MFE
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 
 
@@ -34,3 +35,14 @@ def valid_model(model, valid_loader):
             output = model(x).view(-1)
             mse += ((output - y) ** 2).sum()
     return mse / len(valid_loader)
+
+def get_meta_features(data):
+    s = "inst_to_attr, nr_class, nr_attr, attr_to_inst, skewness, kurtosis, cor, cov, attr_conc, class_conc, sparsity, gravity, skewness, class_ent, attr_ent, mut_inf, eq_num_attr, ns_ratio, f1, f2, tree_depth, leaves_branch, nodes_per_attr, leaves_per_class"
+    s = s.split(", ")
+
+    X, y = data.drop(['reg_id', 'y'], axis=1).to_numpy(), data['y'].to_numpy()
+
+    mfe = MFE(features=[*s])
+    mfe.fit(X, y)
+    ft = mfe.extract()
+    return ft[1]
