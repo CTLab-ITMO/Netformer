@@ -7,5 +7,7 @@ sys.path.insert(0, project_root)
 
 
 from lib.netformer.dataset import Net, act
-net = Net(1, 10, act)
-print(net)
+from converter import matrix_converter
+net = Net(10, 1, act)
+converted = matrix_converter(net)
+print(converted)
