@@ -134,6 +134,22 @@ class MyUNet(nn.Module):
         out3 = self.b3(self.down2(out2) + self.te3(t_e).reshape(n, -1, 1, 1))  # (N, 40, 16, 16)
         out4 = self.b4(self.down3(out3) + self.te4(t_e).reshape(n, -1, 1, 1))  # (N, 80, 8, 8)
 
+        out_mid = self.b_mid(self.down4(out4) + self.te_mid(t_e).reshape(n, -1, 1, 1))  # (N, 80, 4, 4)
+
+        out5 = torch.cat((out4, self.up1(out_mid)), dim=1)  # (N, 160, 8, 8)
+        out5 = self.b5(out5 + self.te5(t_e).reshape(n, -1, 1, 1))  # (N, 40, 8, 8)
+
+        out6 = torch.cat((out3, self.up2(out5)), dim=1)  # (N, 80, 16, 16)
+        out6 = self.b6(out6 + self.te6(t_e).reshape(n, -1, 1, 1))  # (N, 20, 16, 16)
+
+        out7 = torch.cat((out2, self.up3(out6)), dim=1)  # (N, 40, 32, 32)
+        out7 = self.b7(out7 + self.te7(t_e).reshape(n, -1, 1, 1))  # (N, 10, 32, 32)
+
+        out = torch.cat((out1, self.up4(out7)), dim=1)  # (N, 20, 64, 64)
+        out = self.b_out(out + self.te_out(t_e).reshape(n, -1, 1, 1))  # (N, 10, 64, 64)
+
+        out = self.conv_out(out)  # (N, 1, 64, 64)
+
         return out
 
     def make_te_layer(self, dim_in, dim_out):
