@@ -1,4 +1,4 @@
-BATHCSIZE = 36
+BATCHSIZE = 36
 SEQ_SIZE = 350
 n_regs = 4
 lr=1e-4
