@@ -5,5 +5,5 @@ lr=1e-4
 batchsize = 36
 ALL_REGS = 20
 KL = 0.00001
-MODELS_PATH = "../.."
-REG_PATH = "../regressions.csv"
+MODELS_PATH = "lib/generator/weights/"
+REG_PATH = "lib/generator/data/random_regressions.csv"
