@@ -77,7 +77,15 @@ class CNNDecoder(nn.Module):
         # print(x.shape)
         return x
 
+class CNNVAE(nn.Module):
+    def __init__(self):
+        super().__init__()
+        self.cnn_encoder = CNNEncoder()
+        self.cnn_decoder = CNNDecoder()
+    def forward(self, x):
+        x = self.cnn_encoder(x)
+        return(self.cnn_decoder(x))
+
 
 if __name__ == "__main__":
-    cnn_encoder = CNNEncoder()
     cnn_decoder = CNNDecoder()
